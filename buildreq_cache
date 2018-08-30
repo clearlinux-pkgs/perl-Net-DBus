@@ -1,0 +1,6 @@
+1.1.0
+perl(Test::CPAN::Changes)
+perl(Test::Pod)
+perl(Test::Pod::Coverage)
+perl(XML::Parser)
+perl(XML::Twig)
