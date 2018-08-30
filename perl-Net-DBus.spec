@@ -4,12 +4,12 @@
 #
 Name     : perl-Net-DBus
 Version  : 1.1.0
-Release  : 2
+Release  : 3
 URL      : https://cpan.metacpan.org/authors/id/D/DA/DANBERR/Net-DBus-1.1.0.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/D/DA/DANBERR/Net-DBus-1.1.0.tar.gz
 Summary  : unknown
 Group    : Development/Tools
-License  : Artistic-1.0+GPL-1.0 Artistic-1.0-Perl GPL-2.0 GPL-2.0+
+License  : Artistic-1.0 Artistic-1.0-Perl GPL-2.0 GPL-2.0+
 Requires: perl-Net-DBus-lib
 Requires: perl-Net-DBus-license
 BuildRequires : buildreq-cpan
