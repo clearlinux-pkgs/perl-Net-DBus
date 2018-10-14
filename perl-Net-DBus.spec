@@ -4,14 +4,14 @@
 #
 Name     : perl-Net-DBus
 Version  : 1.1.0
-Release  : 3
+Release  : 4
 URL      : https://cpan.metacpan.org/authors/id/D/DA/DANBERR/Net-DBus-1.1.0.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/D/DA/DANBERR/Net-DBus-1.1.0.tar.gz
 Summary  : unknown
 Group    : Development/Tools
 License  : Artistic-1.0 Artistic-1.0-Perl GPL-2.0 GPL-2.0+
-Requires: perl-Net-DBus-lib
-Requires: perl-Net-DBus-license
+Requires: perl-Net-DBus-lib = %{version}-%{release}
+Requires: perl-Net-DBus-license = %{version}-%{release}
 BuildRequires : buildreq-cpan
 BuildRequires : dbus-dev
 BuildRequires : perl(Test::CPAN::Changes)
@@ -29,8 +29,8 @@ have not been too drastic.
 %package dev
 Summary: dev components for the perl-Net-DBus package.
 Group: Development
-Requires: perl-Net-DBus-lib
-Provides: perl-Net-DBus-devel
+Requires: perl-Net-DBus-lib = %{version}-%{release}
+Provides: perl-Net-DBus-devel = %{version}-%{release}
 
 %description dev
 dev components for the perl-Net-DBus package.
@@ -39,7 +39,7 @@ dev components for the perl-Net-DBus package.
 %package lib
 Summary: lib components for the perl-Net-DBus package.
 Group: Libraries
-Requires: perl-Net-DBus-license
+Requires: perl-Net-DBus-license = %{version}-%{release}
 
 %description lib
 lib components for the perl-Net-DBus package.
@@ -78,12 +78,12 @@ make TEST_VERBOSE=1 test
 
 %install
 rm -rf %{buildroot}
-mkdir -p %{buildroot}/usr/share/doc/perl-Net-DBus
-cp LICENSE %{buildroot}/usr/share/doc/perl-Net-DBus/LICENSE
+mkdir -p %{buildroot}/usr/share/package-licenses/perl-Net-DBus
+cp LICENSE %{buildroot}/usr/share/package-licenses/perl-Net-DBus/LICENSE
 if test -f Makefile.PL; then
-make pure_install PERL_INSTALL_ROOT=%{buildroot}
+make pure_install PERL_INSTALL_ROOT=%{buildroot} INSTALLDIRS=vendor
 else
-./Build install --installdirs=site --destdir=%{buildroot}
+./Build install --installdirs=vendor --destdir=%{buildroot}
 fi
 find %{buildroot} -type f -name .packlist -exec rm -f {} ';'
 find %{buildroot} -depth -type d -exec rmdir {} 2>/dev/null ';'
@@ -92,40 +92,40 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/site_perl/5.26.1/x86_64-linux-thread-multi/Net/DBus.pm
-/usr/lib/perl5/site_perl/5.26.1/x86_64-linux-thread-multi/Net/DBus/ASyncReply.pm
-/usr/lib/perl5/site_perl/5.26.1/x86_64-linux-thread-multi/Net/DBus/Annotation.pm
-/usr/lib/perl5/site_perl/5.26.1/x86_64-linux-thread-multi/Net/DBus/BaseObject.pm
-/usr/lib/perl5/site_perl/5.26.1/x86_64-linux-thread-multi/Net/DBus/Binding/Bus.pm
-/usr/lib/perl5/site_perl/5.26.1/x86_64-linux-thread-multi/Net/DBus/Binding/Connection.pm
-/usr/lib/perl5/site_perl/5.26.1/x86_64-linux-thread-multi/Net/DBus/Binding/Introspector.pm
-/usr/lib/perl5/site_perl/5.26.1/x86_64-linux-thread-multi/Net/DBus/Binding/Iterator.pm
-/usr/lib/perl5/site_perl/5.26.1/x86_64-linux-thread-multi/Net/DBus/Binding/Message.pm
-/usr/lib/perl5/site_perl/5.26.1/x86_64-linux-thread-multi/Net/DBus/Binding/Message/Error.pm
-/usr/lib/perl5/site_perl/5.26.1/x86_64-linux-thread-multi/Net/DBus/Binding/Message/MethodCall.pm
-/usr/lib/perl5/site_perl/5.26.1/x86_64-linux-thread-multi/Net/DBus/Binding/Message/MethodReturn.pm
-/usr/lib/perl5/site_perl/5.26.1/x86_64-linux-thread-multi/Net/DBus/Binding/Message/Signal.pm
-/usr/lib/perl5/site_perl/5.26.1/x86_64-linux-thread-multi/Net/DBus/Binding/PendingCall.pm
-/usr/lib/perl5/site_perl/5.26.1/x86_64-linux-thread-multi/Net/DBus/Binding/Server.pm
-/usr/lib/perl5/site_perl/5.26.1/x86_64-linux-thread-multi/Net/DBus/Binding/Value.pm
-/usr/lib/perl5/site_perl/5.26.1/x86_64-linux-thread-multi/Net/DBus/Binding/Watch.pm
-/usr/lib/perl5/site_perl/5.26.1/x86_64-linux-thread-multi/Net/DBus/Callback.pm
-/usr/lib/perl5/site_perl/5.26.1/x86_64-linux-thread-multi/Net/DBus/Dumper.pm
-/usr/lib/perl5/site_perl/5.26.1/x86_64-linux-thread-multi/Net/DBus/Error.pm
-/usr/lib/perl5/site_perl/5.26.1/x86_64-linux-thread-multi/Net/DBus/Exporter.pm
-/usr/lib/perl5/site_perl/5.26.1/x86_64-linux-thread-multi/Net/DBus/Object.pm
-/usr/lib/perl5/site_perl/5.26.1/x86_64-linux-thread-multi/Net/DBus/ProxyObject.pm
-/usr/lib/perl5/site_perl/5.26.1/x86_64-linux-thread-multi/Net/DBus/Reactor.pm
-/usr/lib/perl5/site_perl/5.26.1/x86_64-linux-thread-multi/Net/DBus/RemoteObject.pm
-/usr/lib/perl5/site_perl/5.26.1/x86_64-linux-thread-multi/Net/DBus/RemoteService.pm
-/usr/lib/perl5/site_perl/5.26.1/x86_64-linux-thread-multi/Net/DBus/Service.pm
-/usr/lib/perl5/site_perl/5.26.1/x86_64-linux-thread-multi/Net/DBus/Test/MockConnection.pm
-/usr/lib/perl5/site_perl/5.26.1/x86_64-linux-thread-multi/Net/DBus/Test/MockIterator.pm
-/usr/lib/perl5/site_perl/5.26.1/x86_64-linux-thread-multi/Net/DBus/Test/MockMessage.pm
-/usr/lib/perl5/site_perl/5.26.1/x86_64-linux-thread-multi/Net/DBus/Test/MockObject.pm
-/usr/lib/perl5/site_perl/5.26.1/x86_64-linux-thread-multi/Net/DBus/Tutorial.pod
-/usr/lib/perl5/site_perl/5.26.1/x86_64-linux-thread-multi/Net/DBus/Tutorial/ExportingObjects.pod
-/usr/lib/perl5/site_perl/5.26.1/x86_64-linux-thread-multi/Net/DBus/Tutorial/UsingObjects.pod
+/usr/lib/perl5/vendor_perl/5.26.1/x86_64-linux-thread-multi/Net/DBus.pm
+/usr/lib/perl5/vendor_perl/5.26.1/x86_64-linux-thread-multi/Net/DBus/ASyncReply.pm
+/usr/lib/perl5/vendor_perl/5.26.1/x86_64-linux-thread-multi/Net/DBus/Annotation.pm
+/usr/lib/perl5/vendor_perl/5.26.1/x86_64-linux-thread-multi/Net/DBus/BaseObject.pm
+/usr/lib/perl5/vendor_perl/5.26.1/x86_64-linux-thread-multi/Net/DBus/Binding/Bus.pm
+/usr/lib/perl5/vendor_perl/5.26.1/x86_64-linux-thread-multi/Net/DBus/Binding/Connection.pm
+/usr/lib/perl5/vendor_perl/5.26.1/x86_64-linux-thread-multi/Net/DBus/Binding/Introspector.pm
+/usr/lib/perl5/vendor_perl/5.26.1/x86_64-linux-thread-multi/Net/DBus/Binding/Iterator.pm
+/usr/lib/perl5/vendor_perl/5.26.1/x86_64-linux-thread-multi/Net/DBus/Binding/Message.pm
+/usr/lib/perl5/vendor_perl/5.26.1/x86_64-linux-thread-multi/Net/DBus/Binding/Message/Error.pm
+/usr/lib/perl5/vendor_perl/5.26.1/x86_64-linux-thread-multi/Net/DBus/Binding/Message/MethodCall.pm
+/usr/lib/perl5/vendor_perl/5.26.1/x86_64-linux-thread-multi/Net/DBus/Binding/Message/MethodReturn.pm
+/usr/lib/perl5/vendor_perl/5.26.1/x86_64-linux-thread-multi/Net/DBus/Binding/Message/Signal.pm
+/usr/lib/perl5/vendor_perl/5.26.1/x86_64-linux-thread-multi/Net/DBus/Binding/PendingCall.pm
+/usr/lib/perl5/vendor_perl/5.26.1/x86_64-linux-thread-multi/Net/DBus/Binding/Server.pm
+/usr/lib/perl5/vendor_perl/5.26.1/x86_64-linux-thread-multi/Net/DBus/Binding/Value.pm
+/usr/lib/perl5/vendor_perl/5.26.1/x86_64-linux-thread-multi/Net/DBus/Binding/Watch.pm
+/usr/lib/perl5/vendor_perl/5.26.1/x86_64-linux-thread-multi/Net/DBus/Callback.pm
+/usr/lib/perl5/vendor_perl/5.26.1/x86_64-linux-thread-multi/Net/DBus/Dumper.pm
+/usr/lib/perl5/vendor_perl/5.26.1/x86_64-linux-thread-multi/Net/DBus/Error.pm
+/usr/lib/perl5/vendor_perl/5.26.1/x86_64-linux-thread-multi/Net/DBus/Exporter.pm
+/usr/lib/perl5/vendor_perl/5.26.1/x86_64-linux-thread-multi/Net/DBus/Object.pm
+/usr/lib/perl5/vendor_perl/5.26.1/x86_64-linux-thread-multi/Net/DBus/ProxyObject.pm
+/usr/lib/perl5/vendor_perl/5.26.1/x86_64-linux-thread-multi/Net/DBus/Reactor.pm
+/usr/lib/perl5/vendor_perl/5.26.1/x86_64-linux-thread-multi/Net/DBus/RemoteObject.pm
+/usr/lib/perl5/vendor_perl/5.26.1/x86_64-linux-thread-multi/Net/DBus/RemoteService.pm
+/usr/lib/perl5/vendor_perl/5.26.1/x86_64-linux-thread-multi/Net/DBus/Service.pm
+/usr/lib/perl5/vendor_perl/5.26.1/x86_64-linux-thread-multi/Net/DBus/Test/MockConnection.pm
+/usr/lib/perl5/vendor_perl/5.26.1/x86_64-linux-thread-multi/Net/DBus/Test/MockIterator.pm
+/usr/lib/perl5/vendor_perl/5.26.1/x86_64-linux-thread-multi/Net/DBus/Test/MockMessage.pm
+/usr/lib/perl5/vendor_perl/5.26.1/x86_64-linux-thread-multi/Net/DBus/Test/MockObject.pm
+/usr/lib/perl5/vendor_perl/5.26.1/x86_64-linux-thread-multi/Net/DBus/Tutorial.pod
+/usr/lib/perl5/vendor_perl/5.26.1/x86_64-linux-thread-multi/Net/DBus/Tutorial/ExportingObjects.pod
+/usr/lib/perl5/vendor_perl/5.26.1/x86_64-linux-thread-multi/Net/DBus/Tutorial/UsingObjects.pod
 
 %files dev
 %defattr(-,root,root,-)
@@ -166,8 +166,8 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files lib
 %defattr(-,root,root,-)
-/usr/lib/perl5/site_perl/5.26.1/x86_64-linux-thread-multi/auto/Net/DBus/DBus.so
+/usr/lib/perl5/vendor_perl/5.26.1/x86_64-linux-thread-multi/auto/Net/DBus/DBus.so
 
 %files license
-%defattr(-,root,root,-)
-/usr/share/doc/perl-Net-DBus/LICENSE
+%defattr(0644,root,root,0755)
+/usr/share/package-licenses/perl-Net-DBus/LICENSE
