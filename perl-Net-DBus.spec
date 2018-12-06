@@ -92,40 +92,40 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.28.1x86_64-linux-thread-multi/Net/DBus.pm
-/usr/lib/perl5/vendor_perl/5.28.1x86_64-linux-thread-multi/Net/DBus/ASyncReply.pm
-/usr/lib/perl5/vendor_perl/5.28.1x86_64-linux-thread-multi/Net/DBus/Annotation.pm
-/usr/lib/perl5/vendor_perl/5.28.1x86_64-linux-thread-multi/Net/DBus/BaseObject.pm
-/usr/lib/perl5/vendor_perl/5.28.1x86_64-linux-thread-multi/Net/DBus/Binding/Bus.pm
-/usr/lib/perl5/vendor_perl/5.28.1x86_64-linux-thread-multi/Net/DBus/Binding/Connection.pm
-/usr/lib/perl5/vendor_perl/5.28.1x86_64-linux-thread-multi/Net/DBus/Binding/Introspector.pm
-/usr/lib/perl5/vendor_perl/5.28.1x86_64-linux-thread-multi/Net/DBus/Binding/Iterator.pm
-/usr/lib/perl5/vendor_perl/5.28.1x86_64-linux-thread-multi/Net/DBus/Binding/Message.pm
-/usr/lib/perl5/vendor_perl/5.28.1x86_64-linux-thread-multi/Net/DBus/Binding/Message/Error.pm
-/usr/lib/perl5/vendor_perl/5.28.1x86_64-linux-thread-multi/Net/DBus/Binding/Message/MethodCall.pm
-/usr/lib/perl5/vendor_perl/5.28.1x86_64-linux-thread-multi/Net/DBus/Binding/Message/MethodReturn.pm
-/usr/lib/perl5/vendor_perl/5.28.1x86_64-linux-thread-multi/Net/DBus/Binding/Message/Signal.pm
-/usr/lib/perl5/vendor_perl/5.28.1x86_64-linux-thread-multi/Net/DBus/Binding/PendingCall.pm
-/usr/lib/perl5/vendor_perl/5.28.1x86_64-linux-thread-multi/Net/DBus/Binding/Server.pm
-/usr/lib/perl5/vendor_perl/5.28.1x86_64-linux-thread-multi/Net/DBus/Binding/Value.pm
-/usr/lib/perl5/vendor_perl/5.28.1x86_64-linux-thread-multi/Net/DBus/Binding/Watch.pm
-/usr/lib/perl5/vendor_perl/5.28.1x86_64-linux-thread-multi/Net/DBus/Callback.pm
-/usr/lib/perl5/vendor_perl/5.28.1x86_64-linux-thread-multi/Net/DBus/Dumper.pm
-/usr/lib/perl5/vendor_perl/5.28.1x86_64-linux-thread-multi/Net/DBus/Error.pm
-/usr/lib/perl5/vendor_perl/5.28.1x86_64-linux-thread-multi/Net/DBus/Exporter.pm
-/usr/lib/perl5/vendor_perl/5.28.1x86_64-linux-thread-multi/Net/DBus/Object.pm
-/usr/lib/perl5/vendor_perl/5.28.1x86_64-linux-thread-multi/Net/DBus/ProxyObject.pm
-/usr/lib/perl5/vendor_perl/5.28.1x86_64-linux-thread-multi/Net/DBus/Reactor.pm
-/usr/lib/perl5/vendor_perl/5.28.1x86_64-linux-thread-multi/Net/DBus/RemoteObject.pm
-/usr/lib/perl5/vendor_perl/5.28.1x86_64-linux-thread-multi/Net/DBus/RemoteService.pm
-/usr/lib/perl5/vendor_perl/5.28.1x86_64-linux-thread-multi/Net/DBus/Service.pm
-/usr/lib/perl5/vendor_perl/5.28.1x86_64-linux-thread-multi/Net/DBus/Test/MockConnection.pm
-/usr/lib/perl5/vendor_perl/5.28.1x86_64-linux-thread-multi/Net/DBus/Test/MockIterator.pm
-/usr/lib/perl5/vendor_perl/5.28.1x86_64-linux-thread-multi/Net/DBus/Test/MockMessage.pm
-/usr/lib/perl5/vendor_perl/5.28.1x86_64-linux-thread-multi/Net/DBus/Test/MockObject.pm
-/usr/lib/perl5/vendor_perl/5.28.1x86_64-linux-thread-multi/Net/DBus/Tutorial.pod
-/usr/lib/perl5/vendor_perl/5.28.1x86_64-linux-thread-multi/Net/DBus/Tutorial/ExportingObjects.pod
-/usr/lib/perl5/vendor_perl/5.28.1x86_64-linux-thread-multi/Net/DBus/Tutorial/UsingObjects.pod
+/usr/lib/perl5/vendor_perl/5.28.1/x86_64-linux-thread-multi/Net/DBus.pm
+/usr/lib/perl5/vendor_perl/5.28.1/x86_64-linux-thread-multi/Net/DBus/ASyncReply.pm
+/usr/lib/perl5/vendor_perl/5.28.1/x86_64-linux-thread-multi/Net/DBus/Annotation.pm
+/usr/lib/perl5/vendor_perl/5.28.1/x86_64-linux-thread-multi/Net/DBus/BaseObject.pm
+/usr/lib/perl5/vendor_perl/5.28.1/x86_64-linux-thread-multi/Net/DBus/Binding/Bus.pm
+/usr/lib/perl5/vendor_perl/5.28.1/x86_64-linux-thread-multi/Net/DBus/Binding/Connection.pm
+/usr/lib/perl5/vendor_perl/5.28.1/x86_64-linux-thread-multi/Net/DBus/Binding/Introspector.pm
+/usr/lib/perl5/vendor_perl/5.28.1/x86_64-linux-thread-multi/Net/DBus/Binding/Iterator.pm
+/usr/lib/perl5/vendor_perl/5.28.1/x86_64-linux-thread-multi/Net/DBus/Binding/Message.pm
+/usr/lib/perl5/vendor_perl/5.28.1/x86_64-linux-thread-multi/Net/DBus/Binding/Message/Error.pm
+/usr/lib/perl5/vendor_perl/5.28.1/x86_64-linux-thread-multi/Net/DBus/Binding/Message/MethodCall.pm
+/usr/lib/perl5/vendor_perl/5.28.1/x86_64-linux-thread-multi/Net/DBus/Binding/Message/MethodReturn.pm
+/usr/lib/perl5/vendor_perl/5.28.1/x86_64-linux-thread-multi/Net/DBus/Binding/Message/Signal.pm
+/usr/lib/perl5/vendor_perl/5.28.1/x86_64-linux-thread-multi/Net/DBus/Binding/PendingCall.pm
+/usr/lib/perl5/vendor_perl/5.28.1/x86_64-linux-thread-multi/Net/DBus/Binding/Server.pm
+/usr/lib/perl5/vendor_perl/5.28.1/x86_64-linux-thread-multi/Net/DBus/Binding/Value.pm
+/usr/lib/perl5/vendor_perl/5.28.1/x86_64-linux-thread-multi/Net/DBus/Binding/Watch.pm
+/usr/lib/perl5/vendor_perl/5.28.1/x86_64-linux-thread-multi/Net/DBus/Callback.pm
+/usr/lib/perl5/vendor_perl/5.28.1/x86_64-linux-thread-multi/Net/DBus/Dumper.pm
+/usr/lib/perl5/vendor_perl/5.28.1/x86_64-linux-thread-multi/Net/DBus/Error.pm
+/usr/lib/perl5/vendor_perl/5.28.1/x86_64-linux-thread-multi/Net/DBus/Exporter.pm
+/usr/lib/perl5/vendor_perl/5.28.1/x86_64-linux-thread-multi/Net/DBus/Object.pm
+/usr/lib/perl5/vendor_perl/5.28.1/x86_64-linux-thread-multi/Net/DBus/ProxyObject.pm
+/usr/lib/perl5/vendor_perl/5.28.1/x86_64-linux-thread-multi/Net/DBus/Reactor.pm
+/usr/lib/perl5/vendor_perl/5.28.1/x86_64-linux-thread-multi/Net/DBus/RemoteObject.pm
+/usr/lib/perl5/vendor_perl/5.28.1/x86_64-linux-thread-multi/Net/DBus/RemoteService.pm
+/usr/lib/perl5/vendor_perl/5.28.1/x86_64-linux-thread-multi/Net/DBus/Service.pm
+/usr/lib/perl5/vendor_perl/5.28.1/x86_64-linux-thread-multi/Net/DBus/Test/MockConnection.pm
+/usr/lib/perl5/vendor_perl/5.28.1/x86_64-linux-thread-multi/Net/DBus/Test/MockIterator.pm
+/usr/lib/perl5/vendor_perl/5.28.1/x86_64-linux-thread-multi/Net/DBus/Test/MockMessage.pm
+/usr/lib/perl5/vendor_perl/5.28.1/x86_64-linux-thread-multi/Net/DBus/Test/MockObject.pm
+/usr/lib/perl5/vendor_perl/5.28.1/x86_64-linux-thread-multi/Net/DBus/Tutorial.pod
+/usr/lib/perl5/vendor_perl/5.28.1/x86_64-linux-thread-multi/Net/DBus/Tutorial/ExportingObjects.pod
+/usr/lib/perl5/vendor_perl/5.28.1/x86_64-linux-thread-multi/Net/DBus/Tutorial/UsingObjects.pod
 
 %files dev
 %defattr(-,root,root,-)
@@ -166,7 +166,7 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files lib
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.28.1x86_64-linux-thread-multi/auto/Net/DBus/DBus.so
+/usr/lib/perl5/vendor_perl/5.28.1/x86_64-linux-thread-multi/auto/Net/DBus/DBus.so
 
 %files license
 %defattr(0644,root,root,0755)
