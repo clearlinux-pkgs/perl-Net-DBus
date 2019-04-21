@@ -4,10 +4,10 @@
 #
 Name     : perl-Net-DBus
 Version  : 1.1.0
-Release  : 10
+Release  : 11
 URL      : https://cpan.metacpan.org/authors/id/D/DA/DANBERR/Net-DBus-1.1.0.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/D/DA/DANBERR/Net-DBus-1.1.0.tar.gz
-Summary  : unknown
+Summary  : Binding for DBus messaging protocol
 Group    : Development/Tools
 License  : Artistic-1.0 Artistic-1.0-Perl GPL-2.0 GPL-2.0+
 Requires: perl-Net-DBus-lib = %{version}-%{release}
@@ -31,6 +31,7 @@ Summary: dev components for the perl-Net-DBus package.
 Group: Development
 Requires: perl-Net-DBus-lib = %{version}-%{release}
 Provides: perl-Net-DBus-devel = %{version}-%{release}
+Requires: perl-Net-DBus = %{version}-%{release}
 
 %description dev
 dev components for the perl-Net-DBus package.
