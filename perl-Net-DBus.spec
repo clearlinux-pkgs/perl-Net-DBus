@@ -4,7 +4,7 @@
 #
 Name     : perl-Net-DBus
 Version  : 1.2.0
-Release  : 12
+Release  : 13
 URL      : https://cpan.metacpan.org/authors/id/D/DA/DANBERR/Net-DBus-1.2.0.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/D/DA/DANBERR/Net-DBus-1.2.0.tar.gz
 Summary  : Binding for DBus messaging protocol
